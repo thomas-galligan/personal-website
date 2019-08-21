@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:Extra-Light">
+<style>
+    .container {
+        display: grid;
+        grid-template-areas:
+            "nav header side"
+            "nav content side"
+            "footer footer footer";
+
+            grid-template-columns: 100px 1fr 100px;
+            grid-template-rows: 200px 1fr auto;
+            grid-gap: 10px;
+            height: 100vh;
+    }
+
+    main {
+        grid-area:content;
+        }
+
+    .section {
+        background-color: rgba(132, 132, 132, 0.8);
+        border-radius: 8px;
+        padding: 10px;
+        margin: 10px;
+        text-align: left;
+        max-width: 2fr;
+        margin: 10px auto;
+        z-index:2;
+        /*border: solid white;*/
+   } 
+
+   /*.header {
+       grid-column: 1 / 3;
+       grid-row: 1 !important;
+   }*/
+
+   body {
+       background-color:rgb(175, 253, 253);
+       font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+       color:#CCC
+   }
+
+   h1 {
+       font-size: 3em;
+       text-align: left;
+       color: #76323F;
+   }
+
+   h3 {
+       text-align: left;
+       color:lime;
+   }
+
+   aside {
+       grid-area: side;
+       margin-right: 0.5rem;
+   }
+   nav {
+        grid-area: menu;
+        margin-left: 0.5rem;
+        text-align:right;
+        position: fixed;
+   }
+   a {
+       color: black;
+       text-decoration: none;
+   }
+   a:hover {
+       color: lime;
+   }
+
+   .pic {
+       grid-area: pic;
+       margin-right: 0.5rem;
+   }
+   footer {
+       grid-area: footer;
+   }
+
+   header {
+       grid-area: header;
+       padding:5px;
+   }
+
+   table.center {
+       margin-left:auto;
+       margin-right:auto;
+       border-spacing: 1em 1em;
+   }
+
+   .flex-container {
+       display:flex;
+       justify-content: space-around;
+       align-content: space-around;
+   }
+
+   .flex-item {
+       padding:5px;
+       width: 1fr;
+   }
+   img {
+       float: left;
+       border: solid white;
+   }
+</style>
+
+<html>
+<body>
+    
+        <div class="container">
+            <header id="home">
+                <div><h1 style="text-align:right;">Tom Galligan <img src="profile_pic2.jpeg" alt="A selfie of the author" style="border-radius:8px; width:150px; vertical-align:middle;"></h1>
+            <h3 style="text-align:right;color:#CCC">Graduate Software Engineer at <br>Beamery</h3></div>
+        </header>
+        <nav>
+            <a href="#home">Home</a><br>
+            <a href="#programming">Programming</a><br>
+            <a href="#cv">CV</a><br>
+            <a href="#interests">Interests</a><br>
+        </nav>
+        <main>
+            <div class="section">
+                <h3>Welcome!</h3>
+                <p>Hi! Welcome to my site. I'm Tom Galligan, an incoming Graduate Software Engineer at Beamery. This site is a short explanation of who I am and what I enjoy. I hope you enjoy it!</p>
+                
+            </div>
+            <div class="section" style="background-image:url(programming.jpg)">
+            <h3 id="programming" > Programming</h3>
+            <p>I usually program in Python but I've been learning JS over the summer and I think it's great! </p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+            </div>
+        <div class="section" id="#cv">
+            <h3>CV</h3>
+            <table class="center">
+                <tr>
+                    <th>2015-2019</th> 
+                    <td>Master of Mathematical and Theoretical Physics<br> University of Oxford</td>
+                </tr>
+                <tr>
+                        <th>2013-2015</th> 
+                        <td>Maths, Further Maths, Physics, Chemistry and General Studies<br> Urmston Grammar School, Manchester</td>
+                    </tr>
+            </table>
+            <hr>
+            <p>texting</p>
+        </div>
+    </main>
+    <footer>
+        <p> For contact information, see here:....</p>
+    </footer>
+</body>
+</html>
