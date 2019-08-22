@@ -8,137 +8,17 @@ Margins
 Javascript content
 Links to social media etc.-->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:Extra-Light">
-<style>
-
-    html {
-        scroll-behavior: smooth;
-    }
-    .container {
-        display: grid;
-        grid-template-areas:
-            "nav header side"
-            "nav content side"
-            "footer footer footer";
-
-            grid-template-columns: 100px 1fr 100px;
-            grid-template-rows: 200px 1fr auto;
-            grid-gap: 10px;
-            height: 100vh;
-    }
-
-    main {
-        grid-area:content;
-        }
-
-    .section {
-        background-color: rgba(132, 132, 132, 0.8);
-        border-radius: 8px;
-        padding: 25px;
-        text-align: left;
-        max-width: 2fr;
-        margin: 10px;
-        padding: auto;
-        z-index:2;
-        /*border: solid white;*/
-   } 
-
-   /*.header {
-       grid-column: 1 / 3;
-       grid-row: 1 !important;
-   }*/
-
-   body {
-       background-color:#FFF;
-       font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
-       color:#FFF
-   }
-
-   h1 {
-       font-size: 3em;
-       text-align: left;
-       color: #333;
-   }
-
-   h3 {
-       text-align: left;
-       color:#32b0a1;
-   }
-
-   aside {
-       grid-area: side;
-       margin-right: 0.5rem;
-   }
-   nav {
-        grid-area: menu;
-        margin-top:2em;
-        margin-left: 0.5rem;
-        text-align:right;
-        position: fixed;
-   }
-   a {
-       color: black;
-       text-decoration: none;
-   }
-   a:hover {
-       color: #32b0a1;
-   }
-
-   .pic {
-       grid-area: pic;
-       margin-right: 0.5rem;
-   }
-   footer {
-       grid-area: footer;
-       color: #333 !important;
-   }
-
-   header {
-       grid-area: header;
-       padding:5px;
-   }
-
-   table.center {
-       margin-left:15%;
-       margin-right: 15%;
-       width:70%;
-       
-   }
-
-   .flex-container {
-       display:flex;
-       justify-content: space-around;
-       align-content: space-around;
-   }
-                                                         
-   .flex-item {
-       padding:5px;
-       width: 1fr;
-   }
-   img {
-       float: left;
-       border: solid #32b0a1;
-       border-radius:8px;
-       margin:5px;
-   }
-
-   td {
-        text-align:right;
-        padding: 15px 15px 15px 15px;
-    }
-
-    th{
-        padding: 15px 15px 15px 15px;
-    }
-
-</style>
-
+<head>
+    <title>Tom Galligan - Home</title>
+</head>
+<link rel="stylesheet" href="style.css">
 <html>
 <body>
     
         <div class="container">
             <header id="home">
-                <div><h1 style="text-align:right;">Tom Galligan <img src="profile_pic2.jpeg" alt="A selfie of the author" style="border-radius:8px; width:150px; vertical-align:middle;"></h1>
-            <h3 style="text-align:right; color:#333;">Graduate Software Engineer <br>Beamery</h3></div>
+                <div><h1 style="text-align:right;margin-right:7px;">Tom Galligan <img src="img/profile_pic2.jpeg" alt="A selfie of the author" style="border-radius:8px; width:150px; vertical-align:middle;"></h1>
+            <h3 style="text-align:right; color:#333; margin-right:7px;">Graduate Software Engineer <br>Beamery</h3></div>
         </header>
         <nav>
             <a href="#home">Home</a><br>
@@ -147,17 +27,17 @@ Links to social media etc.-->
             <a href="#interests">Interests</a><br>
         </nav>
         <main>
-            <div class="section" style="background-image:url(lakedistrict.jpg)">
+            <div class="section" style="background-image:url(img/lakedistrict.jpg)">
                 <h3>Welcome!</h3>
                 <p>Hi! Welcome to my site. I'm Tom Galligan, an incoming Graduate Software Engineer at Beamery. This site is a short explanation of who I am and what I enjoy. I hope you enjoy it!</p>
                 
             </div>
-            <div class="section" style="background-image:url(programming.jpg)">
+            <div class="section" style="background-image:url(img/programming.jpg)">
             <h3 id="programming" > Programming</h3>
-            <p>I first started programming at university, where we had a MATLAB course in first year. For the first term, I <storng>loathed</storng>coding and spent as little time as possible on it. It was only later on when the projects became more interesting that I began to understand how powerful programming can be, and how much scope there is for creativity and imagination. I ended up hooked, and have been diving into different projects ever since.</p>
+            <p>I first started programming at university, where we had a MATLAB course in first year. For the first term, I <strong>loathed</storng>coding and spent as little time as possible on it. It was only later on when the projects became more interesting that I began to understand how powerful programming can be, and how much scope there is for creativity and imagination. I ended up hooked, and have been diving into different projects ever since.</p>
             <p>Prior to this summer, I mainly worked in Python, with a little C++ and Fortran every now and then. Javascript and web design is a totally new world for me, but I'm really enjoying getting my teeth into it over the summer!</p>
             </div>
-        <div class="section" id="cv" style="background-image:url(radcam.jpg)">
+        <div class="section" id="cv" style="background-image:url(img/radcam.jpg)">
             <h3>CV</h3>
             <table align="center">
                 <tr>
@@ -170,7 +50,7 @@ Links to social media etc.-->
                     </tr>
                 <tr>
                         <th>2013-2015</th> 
-                        <td>A Levels: Maths, Further Maths, Physics, and Chemistry <br> Urmston Grammar School, Manchester</td>
+                        <td>A Levels: Maths, Further Maths, Physics, and Chemistry (AS) <br> Urmston Grammar School, Manchester</td>
                     </tr>
             </table>
             <hr>
@@ -181,19 +61,19 @@ Links to social media etc.-->
            <table align="center"
             <tr>
 
-            <td><a href="https://arxiv.org/abs/1901.01264" target="_blank"><img src='deepcool.png' style="width:200px;height:200px;";alt="a computer simulation of a galaxy"></a></td>
-            <td><a href="https://arxiv.org/abs/1901.01272" target="_blank"><img src='aspen.png' style="width:200px; ;";alt="a computer simulation of a galaxy"></a></td>
-            <td><a href="https://arxiv.org/abs/1805.08301" target="_blank"><img src='maleo.png' style="width:200px;height:200px;";alt="a computer simulation of a galaxy"></a></td>
+            <td><a href="https://arxiv.org/abs/1901.01264" target="_blank"><img src="img/deepcool.png" style="width:200px;height:200px;";alt="a computer simulation of a galaxy"></a></td>
+            <td><a href="https://arxiv.org/abs/1901.01272" target="_blank"><img src="img/aspen.png" style="width:200px; ;";alt="a computer simulation of a galaxy"></a></td>
+            <td><a href="https://arxiv.org/abs/1805.08301" target="_blank"><img src="img/maleo.png" style="width:200px;height:200px;";alt="a computer simulation of a galaxy"></a></td>
             </tr>
         </table>
         </div>
 
-        <div class="section" id="interests" style="background-image:url(manchester.jpg)">
+        <div class="section" id="interests" style="background-image:url(img/manchester.jpg)">
             <h3>Interests</h3>
         </div>
     </main>
     <footer>
-        <p> For contact information, see here:....</p>
+        
     </footer>
 </body>
 </html>
