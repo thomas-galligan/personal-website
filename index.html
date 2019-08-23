@@ -1,48 +1,64 @@
 <!DOCTYPE html>
 <!--TODO 
-Fix table
 Make responsive
 Flesh out content
-Animated scrolling when using menu bar?
-Margins
 Javascript content
 Links to social media etc.-->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:Extra-Light">
 <head>
     <title>Tom Galligan - Home</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script>
+    $(document).ready(function(){ // fade in the content boxes 
+        $("button").click(function(){
+            this.style.visibility = "hidden";
+            $("#nav").hide().fadeIn(500);
+            $("#programming").hide().fadeIn(1000);
+            $("#cv").hide().fadeIn(1500);
+            $("#interests").hide().fadeIn(2000);
+            
+        });
+    });
+
+    $(document).ready(function(){ //fade in welcome screen
+    $("#home").hide(0).fadeIn(2000)
+    });
+    </script>
 </head>
 <link rel="stylesheet" href="style.css">
 <html>
 <body>
-    
-        <div class="container">
-            <header id="home">
-                <div><h1 style="text-align:right;margin-right:7px;">Tom Galligan <img src="img/profile_pic2.jpeg" alt="A selfie of the author" style="border-radius:8px; width:150px; vertical-align:middle;"></h1>
+        
+        <div class="container" id="home">
+            <header>
+                <div><h1 style="text-align:right;margin-right:7px;">Tom Galligan <img src="img/profile_pic2.jpeg" alt="A selfie of the author" style="border-radius:8px; width:150px; vertical-align:middle;" class="main"></h1>
             <h3 style="text-align:right; color:#333; margin-right:7px;">Graduate Software Engineer <br>Beamery</h3></div>
         </header>
-        <nav>
+        
+        <nav id="nav">
             <a href="#home">Home</a><br>
             <a href="#programming">Programming</a><br>
             <a href="#cv">CV</a><br>
             <a href="#interests">Interests</a><br>
         </nav>
         <main>
-            <div class="section" style="background-image:url(img/lakedistrict.jpg)">
+            <div class="section" style="background-image:url(img/lakedistrict.jpg);display:block;">
                 <h3>Welcome!</h3>
                 <p>Hi! Welcome to my site. I'm Tom Galligan, an incoming Graduate Software Engineer at Beamery. This site is a short explanation of who I am and what I enjoy. I hope you enjoy it!</p>
+                <p style="text-align:center;"><button class="start">Click to begin!</button></p>
                 
             </div>
-            <div class="section" style="background-image:url(img/programming.jpg)">
-            <h3 id="programming" > Programming</h3>
-            <p>I first started programming at university, where we had a MATLAB course in first year. For the first term, I <strong>loathed</storng>coding and spent as little time as possible on it. It was only later on when the projects became more interesting that I began to understand how powerful programming can be, and how much scope there is for creativity and imagination. I ended up hooked, and have been diving into different projects ever since.</p>
-            <p>Prior to this summer, I mainly worked in Python, with a little C++ and Fortran every now and then. Javascript and web design is a totally new world for me, but I'm really enjoying getting my teeth into it over the summer!</p>
+            <div class="section"  id="programming" style="background-image:url(img/programming.jpg)">
+            <h3> Programming</h3>
+            <p>I first started programming at university, where we had a MATLAB course in first year. For the first term, I <em>loathed</em> coding and spent as little time as possible on it. It was only later on when the projects became more interesting that I began to understand how powerful programming can be, and how much scope there is for creativity and imagination. I ended up hooked, and have been diving into different projects ever since.</p>
+            <p>Prior to this summer, I mainly worked in Python, with a little C++ and Fortran every now and then. Javascript and web design is a totally new world for me, but I'm really enjoying getting my teeth into it.</p>
             </div>
         <div class="section" id="cv" style="background-image:url(img/radcam.jpg)">
             <h3>CV</h3>
             <table align="center">
                 <tr>
                     <th>2018-2019</th> 
-                    <td>Master of Mathematical and Theoretical Physics<br> Dissertation: <em>Signatures of the Milky Way's non-axisymmetry from Gaia data</em><br>University of Oxford</td>
+                    <td>MMathPhys Mathematical and Theoretical Physics<br> Dissertation: <em>Signatures of the Milky Way's non-axisymmetry from Gaia data</em><br>University of Oxford</td>
                 </tr>
                 <tr>
                         <th>2015-2018</th> 
@@ -57,23 +73,59 @@ Links to social media etc.-->
             <h3>Projects</h3>
             <p>Most of my programming experience has been in computational physics. I worked on the simulation of plasmas, both for nuclear fusion research and in astrophysical contexts. My main area of interest was the application of machine learning to plasma physics, and how ML can be used to improve our understanding of galaxy formation. 
             </p>
-            <p>Click on any of the pictures below to find out more!</p>
-           <table align="center"
-            <tr>
+            <p>Click on any of the pictures below to find out more.</p>
+           <table align="center">
+                <tr>
+                    <td>
+                        <a href="https://arxiv.org/abs/1901.01264" target="_blank">
+                            <img src="img/deepcool.png" style="width:200px;height:200px;" alt="a computer simulation of a galaxy" class="image">
+                        </a>
+                    </td>
 
-            <td><a href="https://arxiv.org/abs/1901.01264" target="_blank"><img src="img/deepcool.png" style="width:200px;height:200px;";alt="a computer simulation of a galaxy"></a></td>
-            <td><a href="https://arxiv.org/abs/1901.01272" target="_blank"><img src="img/aspen.png" style="width:200px; ;";alt="a computer simulation of a galaxy"></a></td>
-            <td><a href="https://arxiv.org/abs/1805.08301" target="_blank"><img src="img/maleo.png" style="width:200px;height:200px;";alt="a computer simulation of a galaxy"></a></td>
+                    <td>
+                        <a href="https://arxiv.org/abs/1901.01272" target="_blank"><img src="img/aspen.png" style="width:200px; ;";alt="a computer simulation of a galaxy"></a>
+                    </td>
+
+                    <td>
+                        <a href="https://arxiv.org/abs/1805.08301" target="_blank"><img src="img/maleo.png" style="width:200px;height:200px;";alt="a computer simulation of a galaxy"></a>
+                    </td>
             </tr>
         </table>
         </div>
 
         <div class="section" id="interests" style="background-image:url(img/manchester.jpg)">
             <h3>Interests</h3>
+            <ul style="list-style-type:none"
+                <li>
+                    Outside of work, I like to rock climb. I'm hoping to get into it more this Autumn, and explore some of the London climbing gyms. <!--*<img src="img/climbing.jpeg" alt="a cat" style="width:200px;">-->
+                </li>
+                
+                <li>
+                    I'm from the Peak District, and love travelling home to walk in the hills. I also love the Lake District and the Scottish Highlands. <!--<img src="img/lyme.jpeg" alt="deer on a hill" style="width:200px;">-->
+                </li>
+
+                <li>
+                    I also have a cat called Max, who we rescued last year. <!--<img src="img/max.jpeg" alt="a cat" style="width:200px;">-->
+                </li>
+            </ul>
         </div>
     </main>
     <footer>
-        
+        <table align="center">
+            <tr>
+                <td>
+                    <a href="https://www.linkedin.com/in/tom-galligan/" target="_blank"><img src="img/linkedin.png" alt="LinkedIn Logo" width="50px" style="border: none"></a>
+                </td>
+
+                <td>
+                    <a href="https://twitter.com/tomGallEng" target="_blank"><img src="img/twitter.png" alt="Twitter Logo" width="50px" style="border: none"></a>
+                </td>
+
+                <td>
+                        <a href="https://github.com/thomas-galligan" target="_blank"><img src="img/github.png" alt="Github Logo" width="50px" style="border: none"></a>
+                </td>
+            </tr>
+        </table>
     </footer>
 </body>
 </html>

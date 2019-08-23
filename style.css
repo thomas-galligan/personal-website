@@ -1,6 +1,10 @@
 html {
     scroll-behavior: smooth;
 }
+
+main {
+    grid-area:content;
+    }
 .container {
     display: grid;
     grid-template-areas:
@@ -14,10 +18,7 @@ html {
         height: 100vh;
 }
 
-main {
-    grid-area:content;
-    }
-
+ 
 .section {
     background-color: rgba(132, 132, 132, 0.8);
     border-radius: 8px;
@@ -27,6 +28,7 @@ main {
     margin: 10px;
     padding: auto;
     z-index:2;
+    display:none;
     /*border: solid white;*/
 } 
 
@@ -62,6 +64,7 @@ nav {
     margin-left: 0.5rem;
     text-align:right;
     position: fixed;
+    display:none;
 }
 a {
    color: black;
@@ -71,6 +74,19 @@ a:hover {
    color: #32b0a1;
 }
 
+.start {
+    background-color:#32b0a1;
+    border:solid white;
+    border-radius:8px;
+    color:white;
+    padding:10px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.start:hover {
+    background-color:#217167;
+}
 .pic {
    grid-area: pic;
    margin-right: 0.5rem;
@@ -103,12 +119,14 @@ table.center {
    width: 1fr;
 }
 img {
-   float: left;
    border: solid #32b0a1;
    border-radius:8px;
    margin:5px;
 }
 
+img.main{
+    float: left;
+}
 td {
     text-align:right;
     padding: 15px 15px 15px 15px;
