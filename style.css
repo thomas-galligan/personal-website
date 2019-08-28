@@ -2,7 +2,6 @@ html {
     scroll-behavior: smooth; /*smooth scrolling */
 }
 
-
 .container {
     display: grid;
     grid-template-areas:
@@ -14,17 +13,6 @@ html {
     grid-template-rows: 200px 1fr auto;
     grid-gap: 17px;
     height: 100vh;
-}
-
-.flex-container {
-    display:flex;
-    justify-content: space-around;
-    align-content: space-around;
- }
-                                                      
-.flex-item {
-    padding:5px;
-    width: 1fr;
 }
 
 main {
@@ -101,24 +89,6 @@ a {
 
 a:hover {color: #32b0a1;}
 
-.start {
-    background-color:#32b0a1;
-    border:solid white;
-    border-radius:8px;
-    color:white;
-    padding:10px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-}
-
-.start:hover {
-    background-color:#217167;
-}
-
-.pic {
-   grid-area: pic;
-   margin-right: 0.5rem;
-}
 
 table.center {
    margin-left:15%;
