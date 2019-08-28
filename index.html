@@ -1,38 +1,19 @@
 <!DOCTYPE html>
 <!--TODO 
 Make responsive
-Flesh out content
-Javascript content
-Links to social media etc.-->
+Javascript content-->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:Extra-Light">
 <head>
     <title>Tom Galligan - Home</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
-    <script>
-    $(document).ready(function(){ // fade in the content boxes 
-        $("button").click(function(){
-            this.style.visibility = "hidden";
-            $("#nav").hide().fadeIn(500);
-            $("#programming").hide().fadeIn(1000);
-            $("#cv").hide().fadeIn(1500);
-            $("#interests").hide().fadeIn(2000);
-            
-        });
-    });
-
-    $(document).ready(function(){ //fade in welcome screen
-    $("#home").hide(0).fadeIn(2000)
-    });
-    </script>
 </head>
 <link rel="stylesheet" href="style.css">
+<script src="darkmode.js"></script>
 <html>
 <body>
-        
         <div class="container" id="home">
             <header>
-                <div><h1 style="text-align:right;margin-right:7px;">Tom Galligan <img src="img/profile_pic2.jpeg" alt="A selfie of the author" style="border-radius:8px; width:150px; vertical-align:middle;" class="main"></h1>
-            <h3 style="text-align:right; color:#333; margin-right:7px;">Graduate Software Engineer <br>Beamery</h3></div>
+                <div><h1 id="name" style="text-align:right;margin-right:7px;">Tom Galligan <img src="img/profile_pic2.jpeg" alt="A selfie of the author" style="border-radius:8px; width:150px; vertical-align:middle;" class="main"></h1>
+            <h3 id="job_title" style="text-align:right; color:#333; margin-right:7px;">Graduate Software Engineer <br>Beamery</h3></div>
         </header>
         
         <nav id="nav">
@@ -40,13 +21,12 @@ Links to social media etc.-->
             <a href="#programming">Programming</a><br>
             <a href="#cv">CV</a><br>
             <a href="#interests">Interests</a><br>
+            <button id="darkModeButton" class="button" onclick="darkMode()">Dark Mode</button>
         </nav>
         <main>
             <div class="section" style="background-image:url(img/lakedistrict.jpg);display:block;">
                 <h3>Welcome!</h3>
-                <p>Hi! Welcome to my site. I'm Tom Galligan, an incoming Graduate Software Engineer at Beamery. This site is a short explanation of who I am and what I enjoy. I hope you enjoy it!</p>
-                <p style="text-align:center;"><button class="start">Click to begin!</button></p>
-                
+                <p>Hi! Welcome to my site. I'm Tom Galligan, an incoming Graduate Software Engineer at Beamery. This site is a short explanation of who I am and what do in my free time. I hope you enjoy it!</p>
             </div>
             <div class="section"  id="programming" style="background-image:url(img/programming.jpg)">
             <h3> Programming</h3>
@@ -78,8 +58,7 @@ Links to social media etc.-->
                 <tr>
                     <td>
                         <a href="https://arxiv.org/abs/1901.01264" target="_blank">
-                            <img src="img/deepcool.png" style="width:200px;height:200px;" alt="a computer simulation of a galaxy" class="image">
-                        </a>
+                            <img src="img/deepcool.png" style="width:200px;height:200px;" alt="a computer simulation of a galaxy" class="image"></a>
                     </td>
 
                     <td>
@@ -110,6 +89,10 @@ Links to social media etc.-->
             </ul>
         </div>
     </main>
+
+    <aside>
+        
+    </aside>
     <footer>
         <table align="center">
             <tr>
