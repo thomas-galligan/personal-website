@@ -17,6 +17,7 @@ function darkMode() {
     document.getElementById("darkModeButton").innerHTML = "Light Mode";
     document.getElementById("darkModeButton").style.border="solid white";
     document.getElementById("darkModeButton").setAttribute("onClick","lightMode()");
+    document.getElementById("github").src = "img/githubLight.png"
 }
 
 function lightMode() { 
@@ -41,5 +42,6 @@ function lightMode() {
     document.getElementById("darkModeButton").innerHTML = "Dark Mode";
     document.getElementById("darkModeButton").style.border="solid #333";
     document.getElementById("darkModeButton").setAttribute("onClick","darkMode()");
+    document.getElementById("github").src = "img/githubDark.png"
 
 }
