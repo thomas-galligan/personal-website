@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Blog.css"
 import BlogPost from '../components/BlogPost/BlogPost'
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBack';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowBack';
+import { Button } from '@material-ui/core'
 const Blog = (props) => {
+  const [post, setPost] = React.useState(0)
   return (
     <div className="Blog">
-      {blogPosts.map(post => <BlogPost post={post} key={post.title} />)}
+      <BlogPost post={blogPosts[post]} key={post.title} />
     </div>
   )
 }
