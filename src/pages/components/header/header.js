@@ -6,14 +6,15 @@ const Header = (props) => {
   console.log(props)
   return (
     <Tabs
-      value={props.page}
-      onChange={(event, newValue) => { props.setPage(newValue) }}
+      value={props.pageSetting.page}
+      onChange={(event, newValue) => { props.pageSetting.setPage(newValue) }}
       indicatorColor="primary"
       textColor="primary"
       centered
     >
-      <Tab value="Home" label="Item One" />
-      <Tab value="Blog" label="Item Two" />
+      <Tab value="Home" label="Home" />
+      <Tab value="Blog" label="Blog" />
+      <Tab value="About" label="About" />
     </Tabs>
   )
 }
