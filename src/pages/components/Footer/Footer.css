@@ -1,0 +1,14 @@
+.Footer {
+  font-style: italic;
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #282c34;
+  padding: 0.1rem;
+  margin: 0rem;
+  bottom: 0px;
+  color: #e8e8e89d;
+  width: 100vw;
+  height: 2rem;
+}

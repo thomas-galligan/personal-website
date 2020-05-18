@@ -2,3 +2,27 @@
   text-align: left;
   font-size: 1rem;
 }
+
+.taglist {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  font-size: 0.75rem;
+}
+
+.tagRef {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tag{
+  font-style: italic;
+  padding: 0.2rem;
+}
+
+.Chip {
+  padding: 1rem;
+  margin: 0.5rem;
+}
