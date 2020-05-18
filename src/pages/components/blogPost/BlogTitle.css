@@ -1,0 +1,18 @@
+.BlogTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title{
+  font-size: 1.5rem;
+}
+
+.date {
+  font-size: italic;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: right;
+}

@@ -3,9 +3,9 @@ import "./header.css"
 import { Tabs, Tab } from '@material-ui/core'
 
 const Header = (props) => {
-  console.log(props)
   return (
     <Tabs
+      className="Header"
       value={props.pageSetting.page}
       onChange={(event, newValue) => { props.pageSetting.setPage(newValue) }}
       indicatorColor="primary"
